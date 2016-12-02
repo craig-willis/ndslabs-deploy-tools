@@ -15,9 +15,9 @@
 
 - name: Nagios NRPE master container status
   shell: docker ps | grep nrpe
-  register: nrpe-docker
-  failed_when: nrpe-docker.rc < 0
+  register: docker
+  failed_when: docker.rc < 0
 
 - name: Nagios NRPE deploy master container
   command: docker run --name=nrpe -d --net=host --pid=host --privileged --restart=on-failure -v /:/media/host {{ nrpe_image_name }}
-  when: enablenagios is defined and nrpe.rc != 0
+  when: enablenagios is defined and docker.rc != 0
