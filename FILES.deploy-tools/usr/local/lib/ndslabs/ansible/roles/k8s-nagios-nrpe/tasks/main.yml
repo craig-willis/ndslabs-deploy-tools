@@ -14,7 +14,7 @@
   when: enablenagios is defined and deploy.changed
 
 - name: Nagios NRPE master container status
-  command: docker ps | grep nrpe
+  shell: docker ps | grep nrpe
   register: nrpe-docker
 
 - name: Nagios NRPE deploy master container
