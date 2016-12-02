@@ -13,6 +13,10 @@
   command: kubectl create -f  /tmp/nagios-nrpe-ds.yaml
   when: enablenagios is defined and deploy.changed
 
+- name: Nagios NRPE master container status
+  command: docker ps | grep nrpe
+  register: nrpe-docker
+
 - name: Nagios NRPE deploy master container
-  command: docker run -d --net=host --pid=host --privileged --restart=on-failure -v /:/media/host {{ nrpe_image_name }}
-  when: enablenagios is defined
+  command: docker run --name=nrpe -d --net=host --pid=host --privileged --restart=on-failure -v /:/media/host {{ nrpe_image_name }}
+  when: enablenagios is defined and nrpe.rc != 0
