@@ -1,6 +1,3 @@
 ---
 enablegrafana: true
 enablekibana: true
-enableprometheus: false
-enablekubeui: false
-enablekubedash: false
