@@ -15,7 +15,7 @@ master1
 masters
 
 [glfs]
-gfs[1:4]
+gfs[1:2]
 
 [compute]
 node1
