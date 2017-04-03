@@ -2,4 +2,4 @@
 
 flavor: "{{ flavor_large }}"
 
-k8_initial_labels: "ndslabs-node-role=lma"
+k8_initial_labels: "ndslabs-role-lma=true"

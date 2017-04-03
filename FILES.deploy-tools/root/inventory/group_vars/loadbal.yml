@@ -2,6 +2,6 @@
 
 flavor: "{{ flavor_small }}"
 
-k8_initial_labels: "ndslabs-node-role=loadbalancer"
+k8_initial_labels: "ndslabs-role-loadbal=true"
 security_groups: "k8s_loadbalancer"
 
