@@ -14,12 +14,12 @@ master1
 masters
 [glfs]
 gfs[1:2]
-[compute]
-node1
 [monitor]
 lma
 [loadbal]
 loadbal
+[compute]
+node1
 
 #
 # Groups - assigned according to roles 
