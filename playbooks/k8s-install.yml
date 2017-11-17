@@ -37,3 +37,7 @@
   roles:
     - ndslabs-k8-init-labels
 
+- name: Fix flannel mtu
+  hosts: coreos
+  roles:
+    - flannel-mtu
