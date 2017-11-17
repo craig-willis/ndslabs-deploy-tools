@@ -41,3 +41,8 @@
   hosts: coreos
   roles:
     - flannel-mtu
+
+- name: Docker log rotation
+  hosts: cluster
+  roles:
+    - docker-log-rotation
