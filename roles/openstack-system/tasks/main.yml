@@ -1,15 +1,15 @@
 ---
 
-- name: OpenStack system volume for "{{ logical_cluster_name }}-{{ inventory_hostname }}"
-  connection: local
-  become: false
-  os_volume:
-    state: present
-    wait: yes
-    display_name: "{{ logical_cluster_name }}-{{ inventory_hostname }}-bootvol"
-    image: "{{ image }}"
-    size: "{{ sys_vol_size }}"
-  register: os_host_sys_vol
+#- name: OpenStack system volume for "{{ logical_cluster_name }}-{{ inventory_hostname }}"
+#  connection: local
+#  become: false
+#  os_volume:
+#    state: present
+#    wait: yes
+#    display_name: "{{ logical_cluster_name }}-{{ inventory_hostname }}-bootvol"
+#    image: "{{ image }}"
+#    size: "{{ sys_vol_size }}"
+#  register: os_host_sys_vol
 
 - name: OpenStack System
   connection: local
@@ -19,9 +19,10 @@
     wait: yes
     name: "{{ logical_cluster_name }}-{{ inventory_hostname }}"
     flavor: "{{ flavor }}"
+    image: "{{ image }}"
     key_name: "{{ key_name }}"
     auto_ip: false
-    boot_volume: "{{ logical_cluster_name }}-{{ inventory_hostname }}-bootvol"
+#    boot_volume: "{{ logical_cluster_name }}-{{ inventory_hostname }}-bootvol"
   register: os_host
 
 #- debug: var=os_host
