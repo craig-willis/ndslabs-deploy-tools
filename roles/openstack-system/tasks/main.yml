@@ -22,6 +22,7 @@
     image: "{{ image }}"
     key_name: "{{ key_name }}"
     auto_ip: false
+    network: "{{ network_name }}"
 #    boot_volume: "{{ logical_cluster_name }}-{{ inventory_hostname }}-bootvol"
   register: os_host
 
