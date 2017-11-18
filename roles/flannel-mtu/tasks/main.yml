@@ -19,3 +19,6 @@
 - name: Restart docker
   become: true
   command: systemctl restart docker
+
+- name: Wait for docker
+  wait_for: path=/var/run/docker.pid
