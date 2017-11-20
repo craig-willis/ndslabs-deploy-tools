@@ -13,3 +13,5 @@ smtp_tls: false
 mtu: 1458
 
 network_name: workbench
+
+site_name: sdsc
