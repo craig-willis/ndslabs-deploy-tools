@@ -7,7 +7,9 @@ flavor_large: m1.large            # 20G disk, 64Gram, 16cpu
 native_dns: utexas.edu
 
 ndslabs_domain: "{{ logical_cluster_name }}.ndslabs.org" 
- 
+
+smtp_host: ''
+smtp_port: ''
 mtu: 8960
 
 network_name: workbench
