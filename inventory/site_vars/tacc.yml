@@ -8,11 +8,6 @@ native_dns: utexas.edu
 
 ndslabs_domain: "{{ logical_cluster_name }}.ndslabs.org" 
  
-smtp_host: ''
-smtp_port: ''
-smtp_tls: true
-gmail_user: ''
-gmail_password: ''
 mtu: 8960
 
 network_name: workbench
