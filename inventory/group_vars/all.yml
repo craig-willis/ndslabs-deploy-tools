@@ -105,6 +105,8 @@ dns_replicas: 2
 # See kube documentation for apiserver runtime config options.  Example below enables HPA, deployments features.
 apiserver_extra_args: "--runtime-config=batch/v2alpha1=true"
 
+kubelet_options: "--image-pull-progress-deadline=10m"
+
 # our ndslabs-specific labels for Kubernetes nodes
 k8_initial_labels:
   glfs:
